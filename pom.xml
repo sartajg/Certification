@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.lift</groupId>
+	<artifactId>Certification</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<description>Candidate can do their certification</description>
+	<modules>
+		<module>CertificationService</module>
+		<module>CertificationCommonLib</module>
+		<module>CertificationModel</module>
+		<module>CertificationClient</module>
+	</modules>
+
+	<properties>
+		<restEasy.version>3.0.13.Final</restEasy.version>
+		<maven.compiler>3.1</maven.compiler>
+		<java.compiler>1.7</java.compiler>
+		<version.mvn.war>2.1.1</version.mvn.war>
+		<version.junit>4.7</version.junit>
+		<version.spring>3.2.11.RELEASE</version.spring>
+		<version.hibernate>4.2.14.Final</version.hibernate>
+		<version.hibernate-validator>4.3.1.Final</version.hibernate-validator>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>${restEasy.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Below dependency is for JAXB integration -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxb-provider</artifactId>
+			<version>${restEasy.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+<!-- 					<verbose>true</verbose> -->
+					<compilerVersion>${maven.compiler}</compilerVersion>
+					<source>${java.compiler}</source>
+					<target>${java.compiler}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
