@@ -11,10 +11,12 @@ Certification system, which will help user to get certified with the help of pra
 4) Hibernate
 # DB used
 Oracle DB
-#Note, Before using this project, create Data source JNDI with jboss. you can check details abount JNDI name in JBossDatabaseContext.xml file.
+#Note 
+Before using this project, create Data source JNDI with jboss. you can check details abount JNDI name in JBossDatabaseContext.xml file.
 It will help to connect DB before deploying the application into jboss server.
 
-#Below are the details of SQL queries to Create table structure and sequences which has used in this project.
+#SQL Queries
+Below are the details of SQL queries to Create table structure and sequences which has used in this project.
 
 ALTER TABLE USERS
 DROP PRIMARY KEY CASCADE;
